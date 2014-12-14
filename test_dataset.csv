@@ -1,0 +1,7 @@
+num_exp_years,prof_level,edu_qual_highest,sectors,on_kaggle,pub_data_prod,num_days_open,diff_expected_budget_salary,job_type,referred,relocation,interview_prob
+22,9,3,1,0,0,20,0.2,2,0,0,0
+22,9,3,4,0,0,30,0.2,2,0,0,0
+22,9,3,5,0,0,10,0.15,2,0,0,0
+22,9,3,2,0,0,10,0.5,2,0,1,0
+22,9,3,5,0,0,120,0.25,2,0,1,0
+22,9,3,2,0,0,20,0.5,2,0,0,0
