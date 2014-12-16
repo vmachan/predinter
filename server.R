@@ -16,7 +16,7 @@ summary(lm_inter_prob)
 
 # Get test data
 # testds <- read.csv("test_dataset.csv")
-
+# predict(lm_inter_prob, newdata=testds)
 # Browse test data
 # head(testds)
 

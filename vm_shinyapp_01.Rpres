@@ -1,56 +1,82 @@
-Predict a candidate's chances of getting to an interview
+Predict a candidate's chances of getting an interview
 ========================================================
 author: Vinayak D. Machan
 date: December 15th 2014
 font-family: 'Arial'
+css: 'vm_shinyapp_01_styles.css' 
 
-What is the concept?
+Problem Statement and Purpose of tool
 ========================================================
 
-**The purpose of this predictive tool is to help job-seekers and recruiters in the area of assessing a candidate's chances to land an interview for any particular position-candidate pair.**
+<div style="font-size: 0.9em; width: 100%; text-align: justify; ">
+<p/>
+<div style="color: teal; font-weight: bolder;">
+The purpose of this predictive tool is to help job-seekers and recruiters in the area of assessing a candidate's chances to land an interview for any particular position-candidate pair.
+</div>
 
+<p/>
 A lot of time and effort (also spam emails) are wasted by candidates in applying for jobs which they might not even have a fair chance at. Recruiters also send out a lot of automated email enquiries to job-seekers without actually giving much thought to assessing the candidate's potential.
 
+<p/>
 The tool uses a few variables that are then used to predict the probability (chance) of a candidate getting to an interview for a position. 
+</div>
 
 Variables used in prediction model
 ========================================================
 
-1. Candidate work experience (in years)
-2. Candidate's level of proficiency
-3. Highest education qualification
-4. Sector/domain that the position is in.
-5. Participation in Kaggle
-6. Published papers or data products
-7. Number of days the job has been unfilled
-8. Difference between expected salary and budgeted salary
-9. Contract vs. Full-time position
-10. Employee referral?
-11. Relocation required?
+<div style="font-size: 0.9em; width: 100%; text-align: justify; ">
+<ol>
+<li>Candidate work experience (in years)</li>
+<li>Candidate's level of proficiency</li>
+<li>Highest education qualification</li>
+<li>Sector/domain that the position is in</li>
+<li>Participation in Kaggle</li>
+<li>Published papers or data products</li>
+<li>Number of days the job has been unfilled</li>
+<li>Difference between expected salary and budgeted salary</li>
+<li>Contract vs. Full-time position</li>
+<li>Employee referral?</li>
+<li>Relocation required?</li>
+</ol>
+</div>
 
 
 Prediction Model 
 ========================================================
+<div style="font-size: 0.9em; width: 100%; text-align: justify; ">
+<p/>
 A simple linear regression model was created using the training data set.
 
+<p/>
 The training data set was created manually for this exercise and does not include not actual real-world observed values. This was then evaluated against test data that was also manually created based on some real examples. 
 
+<p/>
 The appendix shows the summary of the model.
+</div>
 
 Assumptions and Limitations
 ========================================================
-*Assumptions*
+<div style="font-size: 0.9em; width: 100%; text-align: justify; ">
+<div style="color: teal; font-weight: bold;">
+Assumptions
+</div>
 
 1. There are a lot of variables that can be considered for predicting the chances of a candidate getting a job interview. For the purpose of this tool, we have assumed that the variables listed in slide 2. are the ones that matter most.
-2. The training data created for this tool mirrors real-world scenarios. This can be improved by including real-world observations to train the model.
+2. It is assumed that the manually created training data created mirrors real-world scenarios. This can be improved by including actual (not created) real-world observations to train the model.
 
-*Limitations*
-
+<div style="color: teal; font-weight: bold;">
+Limitations
+</div>
 1. The data (both train and test) used for this prediction model has been created manually and does not include real-world observed values. Given this, the model has some deficiencies and would be greatly improved if real-world observations are made available to train it.
+</div>
 
 Appendix
 ========================================================
-*Linear Model used*<small style="font-size: .5em;">
+<div style="font-size: 0.9em; width: 100%; text-align: justify; ">
+<div style="color: teal; font-weight: bold;">
+Linear Model used
+</div>
+<small style="font-size: .5em; font-weight: strong; width: 80%; color: teal; padding-left: 0;">
 ```{r, echo=FALSE}
 trainds <- read.csv("train_dataset.csv")
 # Linear regression model fit to predict interview_prob
@@ -59,3 +85,4 @@ lm_inter_prob <- lm(interview_prob ~ ., data=trainds)
 summary(lm_inter_prob)
 ```
 </small>
+</div>
